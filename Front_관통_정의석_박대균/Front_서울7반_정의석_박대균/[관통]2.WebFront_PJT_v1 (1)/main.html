@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- HTML5 -->
+<html lang="ko">
+  <!-- 한국어 웹 페이지 -->
+  <head>
+    <!-- 메타 데이터 설정 (설정 정보) -->
+    <meta charset="UTF-8" />
+    <!-- 이 페이지에서 사용하는 문자는 UTF-8 형식을 따른다. -->
+
+    <!-- IE-Edge (최신) 문서 모드 -->
+    <!-- 구버전에서는 사용하지 말아야 한다. -->
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+
+    <!-- 사용자는 디바이스에 최적화 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap 적용 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    <title>SSAFIT</title>
+    <!-- 브라우저 Tab에 표시되는 부분 -->
+  </head>
+
+  <body>
+    <header>
+      <!-- 다른 페이지로의 이동을 담아두는 태그 -->
+      <!-- 통상적으로 웹 페이지의 상단 메뉴 항목 -->
+      <nav class="navbar navbar-dark bg-primary-subtle">
+        <div class="container-fluid">
+            <a class="text-black " style = "text-decoration: none; font-size: 30px;" href="./main.html">SSAFIT</a>
+            <ul class = "nav justify-content-end">
+              <li class = "nav-item" style="list-style : none;">
+                <a class = "nav-link text-secondary" href = "./main.html">Home</a>
+              </li>
+              <li class = "nav-item" style="list-style : none;">
+                <a class = "nav-link text-secondary" href = "login.html">
+                    <img src = "./img/padlock_icon_128402.png" height="30" width="30"></img>
+                    <span class="text-black">&nbsp;로그인</span>
+                </a>
+              </li>
+              <li class = "nav-item" style="list-style : none;">
+                <a class = "nav-link text-secondary" href = "register.html">
+                    <img src = "./img/register_login_signup_icon_219991.png" height="30" width="30"></img>
+                    <span class="text-black">&nbsp;회원가입</span>
+                </a>
+              </li>
+            </ul>
+         </div>
+     </nav>
+      
+    </header>
+
+    <!-- 문서의 주요 내용을 나타내는 태그 -->
+    <main class = "m-1 row">
+      <!-- 독립적인 영역 / 항상 제목이 있어야 한다. -->
+      <section class = "col-8">
+        <div>
+            <img src="./img/health.jpg" height="700" width="1870" alt="">
+        </div>
+        <br />
+        <br />
+       
+        <br />
+        <h3>운동 영상 선택</h3>
+
+
+        <!-- 운동 부위를 선택하기 위한 dropdown -->
+        <!-- <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            운동 부위를 선택하세요.
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">전신</a>
+            <a class="dropdown-item" href="#">상체</a>
+            <a class="dropdown-item" href="#">하체</a>
+            <a class="dropdown-item" href="#">복부</a>
+          </div>
+      </div> -->
+
+      <hr />
+
+
+        <!-- 운동 부위를 검색하기 위한 검색창 -->
+        <!-- <input type="text" placeholder="운동 영상을 검색하세요." id="search-input" /> -->
+        <!-- 검색창 옆에 버튼 생성 -->
+        <!-- <button id="search-btn">검색</button>
+        <hr />
+        <h4>검색 결과</h4>
+         -->
+      <!-- 영상 정보 넣기 -->
+
+      <div class="row content-video-list">
+          <!-- ajax 를 통해 json 파일에 있는 video data 가져와서 동적으로 생성하려다 실패-->
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/gMaB-fG4u4g" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-around mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+              <div>전신 다이어트 최고의 운동 [칼소폭 찐 핵핵매운맛]</div>
+              <hr>
+              <div>부위 : 전신</div>
+              <div>채널 이름 : ThankyouBUBU</div>
+              <br />
+              <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/swRNeYw1JkY" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-around mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+             <div>하루 15분! 전신 칼로리 불태우는 다이어트 운동</div>
+             <hr>
+             <div>부위 : 전신</div>
+             <div>채널 이름 : ThankyouBUBU</div>
+             <br />
+             <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+           </div>
+          </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+         <iframe allowfullscreen src="https://www.youtube.com/embed/54tTYO-vU2E" frameborder="2"></iframe>
+         <div class="video-info d-flex justify-content-around mt-2">
+          <div class="card-text" style="font-size: 0.9rem;">
+            <div>상체 다이어트 최고의 운동 BEST [팔뚝살/겨드랑이살/등살/가슴어깨라인]</div>
+            <hr>
+            <div>부위 : 상체</div>
+            <div>채널 이름 : ThankyouBUBU</div>
+            <br />
+            <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+          </div>
+         </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/QqqZH3j_vH0" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-around mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+             <div>상체비만 다이어트 최고의 운동 [상체 핵매운맛]</div>
+             <hr>
+             <div>부위 : 상체</div>
+             <div>채널 이름 : ThankyouBUBU</div>
+             <br />
+             <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/tzN6ypk6Sps" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-around mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+             <div>하체운동이 중요한 이유? 이것만 보고 따라하자 ! [하체운동 교과서]</div>
+             <hr>
+             <div>부위 : 하체</div>
+             <div>채널 이름 : 김강민</div>
+             <br />
+             <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/u5OgcZdNbMo" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-start mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+              <div>저는 하체 식주의자 입니다</div>
+              <hr>
+              <div>부위 : 하체</div>
+              <div>채널 이름 : GYM종국</div>
+              <br />
+              <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/PjGcOP-TQPE" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-around mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+              <div>11자복근 복부 최고의 운동 [복근 핵매운맛]</div>
+              <hr>
+              <div>부위 : 복부</div>
+              <div>채널 이름 : ThankyouBUBU</div>
+              <br />
+              <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mb-3 col-12 col-md-6 col-lg-3">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/7TLk7pscICk" frameborder="2"></iframe>
+          <div class="video-info d-flex justify-content-around mt-2">
+            <div class="card-text" style="font-size: 0.9rem;">
+             <div>(Sub)누워서하는 5분 복부운동!! 효과보장! (매일 2주만 해보세요!)</div>
+             <hr>
+             <div>부위 : 복부</div>
+             <div>채널 이름 : SomiFit</div>
+             <br />
+             <div><a href="./reviewPage.html"><button>리뷰 등록</button></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- <iframe allowfullscreen src="https://www.youtube.com/embed/gMaB-fG4u4g" frameborder="2"></iframe>
+
+        <iframe allowfullscreen src="https://www.youtube.com/embed/swRNeYw1JkY" frameborder="2"></iframe>
+        
+        <iframe allowfullscreen src="https://www.youtube.com/embed/54tTYO-vU2E" frameborder="2"></iframe>
+        
+        <iframe allowfullscreen src="https://www.youtube.com/embed/QqqZH3j_vH0" frameborder="2"></iframe>
+        
+        <iframe allowfullscreen src="https://www.youtube.com/embed/tzN6ypk6Sps" frameborder="2"></iframe>
+        
+        <iframe allowfullscreen src="https://www.youtube.com/embed/u5OgcZdNbMo" frameborder="2"></iframe>
+        
+        <iframe allowfullscreen src="https://www.youtube.com/embed/PjGcOP-TQPE" frameborder="2"></iframe>
+        
+        <iframe allowfullscreen src="https://www.youtube.com/embed/7TLk7pscICk" frameborder="2"></iframe> -->
+
+
+        <!-- 검색 기능 구현해보려다 실패했습니다... -->
+        <!-- <style>
+          .thumbnail {
+            width: 300px;
+            height: 300px;
+          }
+        </style> -->
+
+        <!-- <ul id="search-result-list" class="d-flex justify-content-between"></ul>
+        <script>
+          const URL = "https://www.googleapis.com/youtube/v3/search";
+          const API_KEY = "AIzaSyA7Bz0ZIDOFwIWq4YyYo3cU-tfzyCQqncU";
+    
+          const btn = document.querySelector('#search-btn');
+          btn.addEventListener('click', () => {
+            // 검색어를 가져오기
+            const inputTag = document.querySelector('#search-input');
+            let keyword = inputTag.value;
+            console.log(keyword);
+    
+            console.log(`${URL}?key=${API_KEY}&part=snippet&q=${keyword}&type=video&maxResults=20`);
+    
+            // 그 검색어를 이용해서 fetch를 이용해서 요청하기
+            // 요청 성공 -> resolved -> response -> body
+            
+            fetch(`${URL}?key=${API_KEY}&part=snippet&q=${keyword}&type=video&maxResults=6`)
+            
+            .then((res) => res.json())
+            .then((body) => body.items)
+            .then((items) => {
+              // 요청받은 결과가 도착하면, 리스트 아이템, img 추가하기
+              const ulTag = document.querySelector('#search-result-list')
+    
+              // forEach문을 구현해보자.
+              items.forEach((item) => {
+                let liTag = document.createElement('li');
+                let imgTag = document.createElement('img');
+                imgTag.src = item.snippet.thumbnails.default.url;
+                imgTag.classList.add("thumbnail");
+                imgTag.classList.add("img-fluid");
+                liTag.classList.add("col-3");
+                liTag.appendChild(imgTag);
+                ulTag.appendChild(liTag);
+              });
+    
+            })
+    
+    
+    
+          });
+        </script> -->
+
+      </section>
+
+      <!-- 주요 내용과 간접적으로 연관된 내용을 작성하는 태그 -->
+      <aside>
+
+      </aside>
+    </main>
+    <!--  class = "m-5 col" -->
+    <!-- 문서의 마지막에 오는 내용 -->
+    <footer class = "bg-primary-subtle d-flex justify-content-evenly">
+      <ul class = "row">
+        <li class = "m-3 col"><a href="#" class = "text-black text-decoration-none">개인정보 처리방침</a></li>
+        <li class = "m-3 col"><a href="#" class = "text-black text-decoration-none">이용 약관</a></li>
+        <li class = "m-3 col"><span class = "text-black">&copy; SSAFIT</span></li>
+      </ul>
+    </footer>
+  </body>
+</html>
